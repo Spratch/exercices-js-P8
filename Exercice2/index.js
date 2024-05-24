@@ -1,4 +1,23 @@
-// Créez votre fonction ici
+function calculate(firstNumber, secondNumber, operator) {
+    const a = parseInt(firstNumber);
+    const b = parseInt(secondNumber);
+    switch (operator) {
+        case '+':
+            return a + b;
+        case '-':
+            return a - b;
+        case '*':
+            return a * b;
+        case '/':
+            if (b === 0) {
+                return 'Division by zero is not allowed'
+            } else {
+                return a / b;
+            }
+        default:
+            return 'Invalid operator';
+    }
+}
 
 // Exemples d'utilisation de la fonction
 console.log(calculate(5, 3, '+'));   // Affiche 8
