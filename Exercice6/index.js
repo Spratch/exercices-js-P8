@@ -1,13 +1,15 @@
+let input = document.getElementById("display");
+
 function appendToDisplay(valueToDisplay) {
-    document.getElementById("display").value += valueToDisplay;;
+    input.value += valueToDisplay;
 }
 function clearDisplay() {
-    document.getElementById("display").value = "";
+    input.value = "";
 }
 function calculateResult() {
-    if (!isFinite(eval(document.getElementById("display").value))) {
-        document.getElementById("display").value = "Division by zero is not allowed";
+    if (!isFinite(eval(input.value))) {
+        input.value = "Division by zero is not allowed";
     } else {
-        document.getElementById("display").value = eval(document.getElementById("display").value);
+        input.value = eval(input.value);
     }
 }
